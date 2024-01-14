@@ -1,0 +1,24 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/ZOM100
+          jwk-set-uri: http://localhost:8080/realms/ZOM100/protocol/openid-connect/certs
+
+keycloak:
+  url: "http://localhost:8080"
+  realm: ZOM100
+  client:
+    id: zm-user-service
+    secret: vlP6A4aWWkzxFxs12S6WCjUpp2IoZItc
+  admin:
+    name: admin
+    password: admin
+
+logging:
+  level:
+    org.springframework.boot: DEBUG

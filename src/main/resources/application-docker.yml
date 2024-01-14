@@ -1,0 +1,10 @@
+spring:
+  config:
+    import: file:/opt/app/.env.yml
+  servlet:
+    multipart:
+      max-file-size: 10MB
+
+logging:
+  level:
+    org.springframework.boot: INFO
